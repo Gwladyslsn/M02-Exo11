@@ -1,0 +1,73 @@
+.carte-livre {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-carte);
+  box-shadow: var(--ombre-carte);
+}
+
+/* Couverture : un aplat de couleur à défaut d'image, avec le titre en bas */
+.carte-livre__couverture {
+  display: flex;
+  align-items: flex-end;
+  min-height: 160px;
+  padding: var(--espace-16);
+  color: #fff;
+  /* Voile sombre par-dessus la couleur fournie par l'API : texte blanc lisible (AA) quelle que soit la couleur */
+  background-image: linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 55%));
+}
+
+.carte-livre__couverture-titre {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-top: var(--espace-8);
+  border-top: 3px solid var(--couleur-accent);
+}
+
+.carte-livre__corps {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: var(--espace-16);
+}
+
+.carte-livre__titre {
+  margin: 0 0 4px;
+  font-size: 1rem;
+}
+
+.carte-livre__auteur {
+  margin: 0 0 4px;
+}
+
+.carte-livre__meta {
+  margin: 0 0 var(--espace-12);
+  color: var(--couleur-texte-attenue);
+  font-size: 0.875rem;
+}
+
+.carte-livre__dispo {
+  align-self: flex-start;
+  margin: 0 0 var(--espace-16);
+  padding: 2px var(--espace-12);
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+
+.carte-livre__dispo--oui {
+  color: var(--couleur-succes);
+  background: var(--couleur-succes-fond);
+}
+
+.carte-livre__dispo--non {
+  color: var(--couleur-neutre);
+  background: var(--couleur-neutre-fond);
+}
+
+.carte-livre__corps > .bouton {
+  margin-top: auto;
+}

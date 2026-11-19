@@ -1,0 +1,39 @@
+.filtres-genre {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.filtres-genre legend {
+  padding: 0;
+  margin-bottom: 6px;
+}
+
+.filtres-genre__liste {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-8);
+}
+
+.filtres-genre__bouton {
+  min-height: 44px;
+  padding: 0 var(--espace-12);
+  color: var(--couleur-primaire);
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure-champ);
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+/* Le bouton enfoncé (aria-pressed) est le filtre actif : l'état se lit dans le DOM */
+.filtres-genre__bouton[aria-pressed='true'] {
+  color: #fff;
+  background: var(--couleur-primaire);
+  border-color: var(--couleur-primaire);
+}
+
+@media (min-width: 1024px) {
+  .filtres-genre {
+    flex: 1 1 320px;
+  }
+}

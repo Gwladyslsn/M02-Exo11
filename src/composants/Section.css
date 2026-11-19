@@ -1,0 +1,29 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-16);
+  padding: var(--espace-16);
+  margin-bottom: var(--espace-24);
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-carte);
+  box-shadow: var(--ombre-carte);
+}
+
+.section__titre {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: var(--espace-24);
+  }
+
+  .section__titre {
+    width: 100%;
+  }
+}

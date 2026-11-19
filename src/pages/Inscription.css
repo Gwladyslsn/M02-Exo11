@@ -1,0 +1,49 @@
+.inscription {
+  max-width: 560px;
+}
+
+.inscription__formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espace-16);
+  padding: var(--espace-24);
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon-carte);
+  box-shadow: var(--ombre-carte);
+}
+
+.inscription__formulaire .message p {
+  margin: 0 0 var(--espace-8);
+  font-weight: 600;
+}
+
+.inscription__formulaire .message ul {
+  margin: 0;
+  padding-left: var(--espace-24);
+}
+
+.inscription__formulaire .message a {
+  color: inherit;
+}
+
+.inscription__case {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--espace-8) var(--espace-12);
+  align-items: center;
+}
+
+.inscription__case input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+
+.inscription__case .champ__erreur {
+  grid-column: 1 / -1;
+}
+
+.inscription__formulaire > .bouton {
+  align-self: flex-start;
+}

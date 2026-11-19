@@ -1,0 +1,21 @@
+.pied-de-page {
+  margin-top: var(--espace-32);
+  background: var(--couleur-surface);
+  border-top: 1px solid var(--couleur-bordure);
+  font-size: 0.875rem;
+}
+
+.pied-de-page__contenu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--espace-12);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--espace-16);
+}
+
+.pied-de-page nav {
+  display: flex;
+  gap: var(--espace-16);
+}

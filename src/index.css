@@ -1,0 +1,165 @@
+/* Identité visuelle de la Médiathèque Jules-Verne : mêmes noms que les variables Figma (Exo.3) */
+:root {
+  --couleur-primaire: #4a2c7a;
+  --couleur-primaire-sombre: #3a2160;
+  --couleur-accent: #e3b23c;
+  --couleur-fond: #faf8fc;
+  --couleur-surface: #fff;
+  --couleur-texte: #1c1c1c;
+  --couleur-texte-attenue: #5f5a6b;
+  --couleur-bordure: #ddd8e6;
+  --couleur-bordure-champ: #7c868d;
+  --couleur-erreur: #b3261e;
+  --couleur-erreur-fond: #fbe4e1;
+  --couleur-succes: #1e6b3e;
+  --couleur-succes-fond: #e3f2e8;
+  --couleur-neutre: #5b6770;
+  --couleur-neutre-fond: #ecebe6;
+
+  --rayon-carte: 12px;
+  --rayon-bouton: 8px;
+  --ombre-carte: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  --espace-8: 8px;
+  --espace-12: 12px;
+  --espace-16: 16px;
+  --espace-24: 24px;
+  --espace-32: 32px;
+
+  --police: 'Nunito Sans', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--police);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--couleur-texte);
+  background: var(--couleur-fond);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 var(--espace-16);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0 0 var(--espace-12);
+}
+
+a {
+  color: var(--couleur-primaire);
+}
+
+button {
+  font: inherit;
+}
+
+/* Le focus reste visible pour la navigation au clavier (RGAA) */
+:focus-visible {
+  outline: 3px solid var(--couleur-accent);
+  outline-offset: 2px;
+}
+
+/* Texte lu par les lecteurs d'écran mais invisible à l'écran */
+.visuellement-cache {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* Boutons réutilisables dans toute l'application */
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--espace-16);
+  border: 1px solid transparent;
+  border-radius: var(--rayon-bouton);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bouton--primaire {
+  background: var(--couleur-primaire);
+  color: #fff;
+}
+
+.bouton--primaire:hover {
+  background: var(--couleur-primaire-sombre);
+}
+
+.bouton--secondaire {
+  background: var(--couleur-surface);
+  color: var(--couleur-primaire);
+  border-color: var(--couleur-primaire);
+}
+
+.bouton:disabled {
+  background: var(--couleur-neutre-fond);
+  color: var(--couleur-neutre);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+/* Champs de formulaire */
+.champ {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.champ__libelle {
+  font-weight: 600;
+}
+
+.champ__saisie {
+  min-height: 44px;
+  padding: 0 var(--espace-12);
+  font: inherit;
+  color: var(--couleur-texte);
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure-champ);
+  border-radius: var(--rayon-bouton);
+}
+
+/* Messages d'état (chargement, erreur, succès) */
+.message {
+  padding: var(--espace-12) var(--espace-16);
+  border-radius: var(--rayon-bouton);
+}
+
+.message--info {
+  background: var(--couleur-surface);
+  border: 1px solid var(--couleur-bordure);
+}
+
+.message--erreur {
+  background: var(--couleur-erreur-fond);
+  color: var(--couleur-erreur);
+}
+
+.message--succes {
+  background: var(--couleur-succes-fond);
+  color: var(--couleur-succes);
+}

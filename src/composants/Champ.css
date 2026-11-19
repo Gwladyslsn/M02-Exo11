@@ -1,0 +1,17 @@
+.champ__aide {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--couleur-texte-attenue);
+}
+
+.champ__saisie--erreur {
+  border-color: var(--couleur-erreur);
+  border-width: 2px;
+}
+
+.champ__erreur {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--couleur-erreur);
+}

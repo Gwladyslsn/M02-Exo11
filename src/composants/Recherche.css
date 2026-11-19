@@ -1,0 +1,21 @@
+.recherche {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.recherche__ligne {
+  display: flex;
+  gap: var(--espace-8);
+}
+
+.recherche__saisie {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .recherche {
+    flex: 1 1 320px;
+  }
+}

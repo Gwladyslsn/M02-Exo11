@@ -1,0 +1,9 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--espace-24) var(--espace-16);
+}
+
+.page__compteur {
+  font-weight: 600;
+}
