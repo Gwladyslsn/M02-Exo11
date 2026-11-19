@@ -8,7 +8,7 @@ export function FicheLivre() {
     const { data: livre, isPending, isError } = useLivre(livreId);
 
     if (isPending) return <p role="status">Chargement…</p>;
-    if (isError) return <p role="alert">Erreur : livre introuvable ou problème serveur.</p>;
+    if (isError) return <p role="alert">Erreur : livre introuvable..</p>;
 
     return (
         <article className="fiche-livre">
