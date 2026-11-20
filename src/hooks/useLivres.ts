@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import { listerLivres } from '../api/livres';
 import type { FiltresLivres, Livre } from '../types/mediatheque';
-import {obtenirLivre} from '../api/livres'
-import { useQuery } from '@tanstack/react-query';
+
 
 // Les trois états d'un chargement, dans une union discriminée : impossible d'avoir des livres ET une erreur
 export type EtatLivres =
@@ -11,12 +10,6 @@ export type EtatLivres =
   | { statut: 'pret'; livres: Livre[] };
 
 
-  export function useLivre( id:number){
-    return useQuery({
-    queryKey:['livres', id],
-    queryFn: ({signal}) => obtenirLivre(id, signal)
-  })
-}
 // Charge le catalogue depuis l'API à chaque changement de filtre, en annulant la requête précédente
 export function useLivres(filtres: FiltresLivres): EtatLivres {
   const [etat, setEtat] = useState<EtatLivres>({ statut: 'chargement' });

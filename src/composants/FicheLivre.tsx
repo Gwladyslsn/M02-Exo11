@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router';
-import { useLivre } from '../hooks/useLivres';
+import { useLivre } from '../hooks/useLivre';
 import './FicheLivre.css';
 
 export function FicheLivre() {
